@@ -9,13 +9,13 @@
     ],
     "vulnerabilityAlerts": {
         "enabled": true,
-        "automerge": false
+        "automerge": true
     },
     "packageRules": [
         {
             "matchPackagePatterns": [ "*" ],
             "matchUpdateTypes": [ "minor", "patch" ],
-            "automerge": false
+            "automerge": true
         },
         {
             "matchPackagePatterns": [ "*" ],
