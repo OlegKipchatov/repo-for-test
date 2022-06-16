@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "config:base"
+    ],
+    "prConcurrentLimit": 2,
+    "semanticCommits": "enabled",
+    "baseBranches": [
+        "master"
+    ],
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "automerge": false
+    },
+    "packageRules": [
+        {
+            "matchPackagePatterns": [ "*" ],
+            "matchUpdateTypes": [ "minor", "patch" ],
+            "automerge": false
+        },
+        {
+            "matchPackagePatterns": [ "*" ],
+            "matchUpdateTypes": [ "major" ],
+            "enabled": false
+        }
+    ],
+    "ignorePaths": [
+        ".github"
+    ],
+    "constraints": {
+        "node": "^16.3.0"
+    }
+}
