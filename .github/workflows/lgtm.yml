@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
       - name: Get LGTM sarif
         # uses: devexpress/github-actions/lgtm@main
-        uses: ./.github/lgtm-get
+        uses: olegkipchatov/test-actions/lgtm@main
         with:
           repository: DevExpress/DevExtreme
 
