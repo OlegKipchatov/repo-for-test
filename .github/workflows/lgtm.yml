@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Get LGTM sarif
         # uses: devexpress/github-actions/lgtm@main
-        uses: ./.github/wokflows/lgtm-get
+        uses: ./.github/lgtm-get
         with:
           repository: DevExpress/DevExtreme
 
