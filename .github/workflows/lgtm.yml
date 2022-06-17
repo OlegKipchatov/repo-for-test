@@ -9,12 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      # - uses: actions/checkout@v2
       - name: Get LGTM sarif
         # uses: devexpress/github-actions/lgtm@main
         uses: olegkipchatov/test-action/lgtm@main
         with:
-          repository: DevExpress/DevExtreme
+          repository: ${{ github.repository }}
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
