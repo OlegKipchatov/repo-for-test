@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Get LGTM sarif
-        uses: devexpress/github-actions/lgtm@v1
+        uses: devexpress/github-actions/lgtm
         with:
           repository: DevExpress/DevExtreme
 
