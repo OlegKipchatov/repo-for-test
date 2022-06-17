@@ -10,16 +10,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Get LGTM sarif
-        # uses: devexpress/github-actions/lgtm@main
-        uses: olegkipchatov/test-action/lgtm@main
+        uses: devexpress/github-actions/lgtm@main
+        # uses: olegkipchatov/test-action/lgtm@main
         with:
           repository: ${{ github.repository }}
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: lgtm.sarif
-
       - name: Display Info
-        run: |
-          echo HOHOHO
+        uses: olegkipchatov/test-action/notify@main
